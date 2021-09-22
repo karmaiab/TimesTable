@@ -18,6 +18,7 @@ public class TimesTable {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        int incorrectAnswers = 0;
         int correctAnswers = 0;
         int Answer = 0;
         Random random = new Random();
@@ -37,9 +38,20 @@ public class TimesTable {
                 ++correctAnswers;
             }
             else
-                System.out.println(RED+"Incorrect"+RESET); 
+                System.out.println(RED+"Incorrect"+RESET);      
         }
-        System.out.println("Done");
-    }
-    
+        if(correctAnswers == 5){
+            System.out.println("Молодец,");
+        }
+        if(correctAnswers == 4){
+            System.out.println("Надо бы еще поучить,");
+        }
+        if(correctAnswers == 3){
+            System.out.println("Надо бы еще поучить,");
+        }
+        if(incorrectAnswers < 2){
+            System.out.println("Срочно нужно учить таблицу умножения");
+        }
+    }   
 }
+
