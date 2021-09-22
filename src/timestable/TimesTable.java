@@ -23,7 +23,9 @@ public class TimesTable {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         int[] nums = new int[2];
-        
+        String GREEN = "\033[0;32m";
+        String RED = "\033[0;31m";
+        String RESET = "\033[0m";
         while(Answer != 5) {
             nums[0] = random.nextInt(9)+1;
             nums[1] = random.nextInt(9)+1;
@@ -31,11 +33,11 @@ public class TimesTable {
             int answer = scanner.nextInt();
             ++Answer;
             if(answer ==  nums[0]*nums[1]) {
-                System.out.println("Correct");
+                System.out.println(GREEN+"Correct"+RESET);
                 ++correctAnswers;
             }
             else
-                System.out.println("Incorrect"); 
+                System.out.println(RED+"Incorrect"+RESET); 
         }
         System.out.println("Done");
     }
